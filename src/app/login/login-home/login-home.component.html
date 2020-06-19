@@ -1,0 +1,38 @@
+<div class="container">
+  <mat-progress-bar
+    mode="indeterminate"
+    *ngIf="showProgressBar"
+  ></mat-progress-bar>
+  <img src="assets/images/Vinglyn_logo.webp" class="logo" />
+  <form
+    (ngSubmit)="loginSubmit(loginForm.value.userName, loginForm.value.password)"
+    [formGroup]="loginForm"
+    class="centerContainer"
+  >
+    <app-login-input
+      input="text"
+      label="UserName"
+      [control]="loginForm.controls.userName"
+    ></app-login-input>
+    <app-login-input
+      input="password"
+      label="Password"
+      [control]="loginForm.controls.password"
+    ></app-login-input>
+    <button
+      type="submit"
+      class="loginButton"
+      [ngClass]="loginForm.valid ? 'loginButtonEnable' : 'loginButtonDisable'"
+      [disabled]="!loginForm.valid"
+    >
+      Login
+    </button>
+  </form>
+  <img src="assets/images/splash.webp" class="bottomImage" />
+</div>
+<!-- <app-progress-bar></app-progress-bar> -->
+
+<!-- <div>{{ loginForm.value | json }}</div> -->
+<!-- <div>{{ loginForm.value.userName }}</div> -->
+<!-- <div>{{ loginForm.valid }}</div>
+<div>{{ loginForm.controls.userName.errors | json }}</div> -->
