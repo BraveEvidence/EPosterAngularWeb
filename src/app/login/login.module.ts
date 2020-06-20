@@ -4,7 +4,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginHomeComponent } from './login-home/login-home.component';
 import { LoginInputComponent } from './login-input/login-input.component';
-import { SharedModule } from '../shared/shared.module';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     CommonModule,
     LoginRoutingModule,
     ReactiveFormsModule,
-    SharedModule,
     MatProgressBarModule,
   ],
 })

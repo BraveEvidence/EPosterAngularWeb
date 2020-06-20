@@ -9,6 +9,18 @@ const routes: Routes = [
       import('./login/login.module').then((m) => m.LoginModule),
   },
   {
+    path: 'send-grettings',
+    loadChildren: () =>
+      import('./send-greetings/send-greetings.module').then(
+        (m) => m.SendGreetingsModule
+      ),
+  },
+  {
+    path: 'add-doctor',
+    loadChildren: () =>
+      import('./add-doctor/add-doctor.module').then((m) => m.AddDoctorModule),
+  },
+  {
     path: '',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },

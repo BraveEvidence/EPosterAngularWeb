@@ -1,0 +1,42 @@
+<div class="container">
+  <mat-progress-bar
+    mode="indeterminate"
+    *ngIf="showProgressBar"
+  ></mat-progress-bar>
+  <div class="headerRow">
+    <img src="assets/images/back.webp" class="backIcon" />
+    <img src="assets/images/Vinglyn_logo.webp" class="logo" />
+    <img src="assets/images/logout.webp" class="logoutIcon" />
+  </div>
+  <form
+    [formGroup]="doctorForm"
+    (ngSubmit)="addDoctor()"
+    class="centerContainer"
+  >
+    <app-add-doctor-input
+      input="text"
+      label="Doctor Name"
+      [control]="doctorForm.controls.doctorName"
+    ></app-add-doctor-input>
+    <app-add-doctor-input
+      input="number"
+      label="Doctor Code"
+      [control]="doctorForm.controls.doctorCode"
+    ></app-add-doctor-input>
+    <button
+      type="submit"
+      class="addDoctorButton"
+      [ngClass]="
+        doctorForm.valid ? 'addDoctorButtonEnable' : 'addDoctorButtonDisable'
+      "
+      [disabled]="!doctorForm.valid"
+    >
+      Add Doctor
+    </button>
+  </form>
+</div>
+
+<!-- <div>{{ doctorForm.value | json }}</div> -->
+<!-- <div>{{ doctorForm.value.userName }}</div> -->
+<!-- <div>{{ doctorForm.valid }}</div> -->
+<div>{{ doctorForm.controls.doctorCode.errors | json }}</div>

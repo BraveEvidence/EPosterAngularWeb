@@ -1,0 +1,35 @@
+.textField {
+  padding: 6px 10px;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 20px;
+}
+
+.validTextField {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.errorTextField {
+  border-bottom: 1px solid red;
+  margin-bottom: 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.errorText {
+  margin: 10px 8px 10px 8px;
+  color: red;
+  text-align: center;
+}

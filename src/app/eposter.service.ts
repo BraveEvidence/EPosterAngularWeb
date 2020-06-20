@@ -7,6 +7,11 @@ interface LoginResponse {
   token: string;
 }
 
+interface AddDoctorResponse {
+  status: number;
+  msg: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -19,6 +24,16 @@ export class EposterService {
       {
         email: username,
         password,
+      }
+    );
+  }
+
+  addDoctor(doctorName: string, doctorCode: string) {
+    return this.http.post<AddDoctorResponse>(
+      'https://eposter-rest.herokuapp.com/api/addDoctor',
+      {
+        doctorName,
+        doctorCode,
       }
     );
   }

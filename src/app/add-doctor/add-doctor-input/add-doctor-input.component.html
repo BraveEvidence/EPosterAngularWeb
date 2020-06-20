@@ -1,11 +1,11 @@
 <div>
   <input
-    [ngClass]="showErrors() ? 'errorTextField' : 'textField'"
+    class="textField"
+    [ngClass]="showErrors() ? 'errorTextField' : 'validTextField'"
     [formControl]="control"
     type="{{ input }}"
     placeholder="{{ label }}"
   />
-
   <ng-container *ngIf="showErrors()">
     <p *ngIf="control.errors.required" class="errorText">
       Value is required

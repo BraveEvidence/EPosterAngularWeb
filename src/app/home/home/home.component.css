@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+}
+
+.headerRow {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 10vw;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 40vw;
+  }
+}
+
+.logoutIcon {
+  width: 2vw;
+  height: 2vw;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .logoutIcon {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+
+.centerContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 8vh;
+}
+
+.mainRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}
+
+.addDoctorImage {
+  width: 4vw;
+  @media (max-width: 768px) {
+    width: 12vw;
+  }
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .addDoctorImage {
+    width: 12vw;
+  }
+}
+
+.addDoctorText {
+  font-size: 20px;
+  color: #666666;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.dividerImg {
+  width: 2px;
+  height: 100px;
+}
+
+.sendGreetingsText {
+  font-size: 20px;
+  color: #666666;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.sendGreetingsImage {
+  width: 4vw;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .sendGreetingsImage {
+    width: 12vw;
+  }
+}
+
+.bottomImage {
+  width: 12vw;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .bottomImage {
+    width: 40vw;
+  }
+}
