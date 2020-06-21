@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="headerRow">
+    <img src="assets/images/back.webp" class="backIcon" (click)="goBack()" />
+    <img src="assets/images/Vinglyn_logo.webp" class="logo" />
+    <a routerLink="/login">
+      <img src="assets/images/logout.webp" class="logoutIcon"
+    /></a>
+  </div>
+  <div class="centerContainer">
+    <p class="chooseTemplateText">Choose Template</p>
+    <img src="assets/images/horizontal_divider.webp" class="dividerImage" />
+    <div class="templateRow">
+      <img *ngFor="let image of images" [src]="image" />
+    </div>
+  </div>
+  <button class="nextButton" (click)="next()">Next</button>
+  <img src="assets/images/splash_two.webp" class="bottomImage" />
+</div>

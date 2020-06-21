@@ -4,9 +4,11 @@
     *ngIf="showProgressBar"
   ></mat-progress-bar>
   <div class="headerRow">
-    <img src="assets/images/back.webp" class="backIcon" />
+    <img src="assets/images/back.webp" class="backIcon" (click)="goBack()" />
     <img src="assets/images/Vinglyn_logo.webp" class="logo" />
-    <img src="assets/images/logout.webp" class="logoutIcon" />
+    <a routerLink="/login">
+      <img src="assets/images/logout.webp" class="logoutIcon" />
+    </a>
   </div>
   <form
     [formGroup]="doctorForm"

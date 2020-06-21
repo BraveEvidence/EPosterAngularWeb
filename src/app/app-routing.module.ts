@@ -9,7 +9,21 @@ const routes: Routes = [
       import('./login/login.module').then((m) => m.LoginModule),
   },
   {
-    path: 'send-grettings',
+    path: 'choose-template',
+    loadChildren: () =>
+      import('./choose-template/choose-template.module').then(
+        (m) => m.ChooseTemplateModule
+      ),
+  },
+  {
+    path: 'create-greeting',
+    loadChildren: () =>
+      import('./create-greeting/create-greeting.module').then(
+        (m) => m.CreateGreetingModule
+      ),
+  },
+  {
+    path: 'send-greetings',
     loadChildren: () =>
       import('./send-greetings/send-greetings.module').then(
         (m) => m.SendGreetingsModule

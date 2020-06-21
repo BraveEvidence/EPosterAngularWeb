@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EposterService } from 'src/app/eposter.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-doctor-home',
@@ -20,7 +21,11 @@ export class AddDoctorHomeComponent implements OnInit {
     ]),
   });
 
-  constructor(private router: Router, private ePosterService: EposterService) {}
+  constructor(
+    private router: Router,
+    private ePosterService: EposterService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {}
 
@@ -42,5 +47,9 @@ export class AddDoctorHomeComponent implements OnInit {
           alert('Error');
         }
       });
+  }
+
+  goBack() {
+    this.location.back();
   }
 }
