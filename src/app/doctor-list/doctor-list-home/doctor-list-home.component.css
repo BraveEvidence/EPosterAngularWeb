@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+}
+
+.logo {
+  width: 10vw;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 40vw;
+  }
+}
+
+.centerContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8vh;
+}
+
+.bottomImage {
+  width: 100vw;
+  height: 30vh;
+}
+
+@media screen and (max-width: 768px) {
+  .bottomImage {
+    width: 100vw;
+    height: 20vh;
+  }
+}
+
+.headerRow {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoutIcon {
+  width: 2vw;
+  height: 2vw;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .logoutIcon {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+
+.backIcon {
+  width: 2vw;
+  margin-top: 12px;
+  margin-left: 10px;
+  @media (max-width: 768px) {
+    width: 5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .backIcon {
+    width: 5vw;
+  }
+}
+
+.doctorListNameText {
+  font-size: 30px;
+  margin: 10px 0px 10px 20px;
+  color: red;
+  align-self: flex-start;
+  width: 100vw;
+}
+
+.dividerImage {
+  height: 2px;
+  margin: 0px 20px 0px 20px;
+  width: 98%;
+}
+
+.doctorListItem {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  align-items: flex-start;
+}
+
+.doctorImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  object-fit: cover;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.doctorNameText {
+  font-size: 20px;
+  align-self: center;
+  margin: 20px 20px;
+}
+
+.doctorNameTextField {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 30vw;
+  align-self: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}

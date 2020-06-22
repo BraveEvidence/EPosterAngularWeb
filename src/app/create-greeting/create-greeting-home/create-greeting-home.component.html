@@ -9,14 +9,15 @@
   <p class="selectDoctorNameText">Select Doctor Name</p>
   <img src="assets/images/horizontal_divider.webp" class="dividerImage" />
   <div class="centerContainer">
-    <div class="dropDownDiv" (click)="goToDoctorList()">
-      <p class="dropDownDoctorNameText">Select Doctor</p>
-      <img
-        src="assets/images/drop_vertical_divider.webp"
-        class="dropDownVerticalDividerImage"
-      />
-      <img src="assets/images/drop_down.webp" class="dropDownImage" />
-    </div>
+    <a routerLink="/doctor-list">
+      <div class="dropDownDiv" (click)="goToDoctorList()">
+        <p class="dropDownDoctorNameText">Select Doctor</p>
+        <img
+          src="assets/images/drop_vertical_divider.webp"
+          class="dropDownVerticalDividerImage"
+        />
+        <img src="assets/images/drop_down.webp" class="dropDownImage" /></div
+    ></a>
     <button class="createButton" (click)="goToPreview()">Create</button>
   </div>
   <img src="assets/images/splash_two.webp" class="bottomImage" />

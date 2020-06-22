@@ -16,6 +16,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'doctor-list',
+    loadChildren: () =>
+      import('./doctor-list/doctor-list.module').then(
+        (m) => m.DoctorListModule
+      ),
+  },
+  {
     path: 'create-greeting',
     loadChildren: () =>
       import('./create-greeting/create-greeting.module').then(
